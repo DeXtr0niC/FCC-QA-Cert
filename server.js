@@ -26,6 +26,7 @@ passport.serializeUser((user, done) => {
   done(null, user._id);
 });
 
+const ObjectID = require('mongodb').ObjectID;
 passport.deserializeUser((id, done) => {
   // myDataBase.findOne({_id: new ObjectID(id)}, (err, doc) => {
     done(null, null)
